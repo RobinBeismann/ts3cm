@@ -45,7 +45,6 @@
 	}
 
 	require_once("TeamSpeak3/TeamSpeak3.php");
-	require_once("includes/connect.db.php");
 
 	$srv = TeamSpeak3::factory("serverquery://".$server_user.":".$server_pw."@".$server_ip.":".$server_query_port."/?server_port=".$server_port);
 
