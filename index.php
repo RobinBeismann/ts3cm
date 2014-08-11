@@ -72,9 +72,10 @@
 		$channelname = $srv->channelGetById($fresult->channel_id)->channel_name;
 		if(isset($_REQUEST["admrights"]))
 		{
-			$srv->clientMove($clientcurid,$channel_id,null);
+			echo("Die Admin Rechte wurden erneut zugeteilt.");
 			$srv->clientSetChannelGroup($clientdbid,$channel_id,5);
-			die("Die Admin Rechte wurden erneut zugeteilt.");
+			$srv->clientMove($clientcurid,$channel_id,null);
+			die();
 		}
 		
 		echo "Du hast bereits einen Channel:<br/>" . $channelname;
