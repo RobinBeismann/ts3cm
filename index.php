@@ -48,7 +48,7 @@
 
 	$srv = TeamSpeak3::factory("serverquery://".$server_user.":".$server_pw."@".$server_ip.":".$server_query_port."/?server_port=".$server_port);
 
-	$ts3_UpdateServer = TeamSpeak3::factory("update");
+	#$ts3_UpdateServer = TeamSpeak3::factory("update"); < This function currently causes a script crash within the TS3 library
 
 	$cl=getClient($clip);
 	echo "Hallo " . $cl["client_nickname"] . "!<br/>";
